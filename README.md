@@ -1,4 +1,5 @@
 # Chungbuk_Univ
+https://cafe.naver.com/yoons2023
 
 <h2>day 01 : 문자열 ~ 조건문</h2>
 == 문자열 ==<br>
