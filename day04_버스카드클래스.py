@@ -10,9 +10,9 @@ class BusCard :
         self.__balance += amount
         return self.__balance
 
-
 def main() :
     fCharge = int(input("충전금액 입력 : "))
+    global    bus
     bus = BusCard()
     bus.deposit(fCharge)
 
@@ -33,7 +33,7 @@ def main() :
             print("\n『 잔액 』 : %d" % change)
             print("남은 탑승가능 횟수 : %d\n" % (change // 1200))
             choice()
-            break
+            continue
         else :
             print("\n▣ Y 혹은 N 으로 답변해주세요 ▣\n")
             continue
@@ -41,7 +41,9 @@ def main() :
 def choice() :
     choice = int(input("1) 재시작\n2) 프로그램 종료 : "))
     if choice == 1 :
-        main()
+        fCharge = int(input("재충전금액 입력 : "))
+        global        bus
+        bus.deposit(fCharge)
     else : pass
     
 main()
