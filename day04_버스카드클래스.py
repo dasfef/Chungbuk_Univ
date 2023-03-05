@@ -39,12 +39,15 @@ def main() :
             continue
 
 def choice() :
-    choice = int(input("1) 재시작\n2) 프로그램 종료 : "))
+    choice = int(input("1) 재시작\t2) 프로그램 종료 : "))
     if choice == 1 :
-        fCharge = int(input("재충전금액 입력 : "))
+        fCharge = int(input("\n재충전금액 입력 : "))
         global        bus
         bus.deposit(fCharge)
-    else : pass
-    
+    else :
+        print("\n=== 프로그램 종료 ===\n")
+        err
+
 main()
-print("=== 프로그램 종료 ===")
+
+
